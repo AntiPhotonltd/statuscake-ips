@@ -1,4 +1,4 @@
-## 1.0.0 (February 9, 2018)
+## 1.0.0 (April 20, 2018)
 
 * Initial Release ([@TimGurney][])
 
