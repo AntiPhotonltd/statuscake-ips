@@ -1,0 +1,59 @@
+matrix:
+  include:
+  - language: python
+    python: 2.6
+    os: linux
+    sudo: required
+    install:
+    - pip install -r requirements.txt
+    script:
+    - pycodestyle src/statuscake-ips.py
+  - language: python
+    python: 2.7
+    os: linux
+    sudo: required
+    install:
+    - pip install -r requirements.txt
+    script:
+    - pycodestyle src/statuscake-ips.py
+  - language: python
+    python: 3.3
+    os: linux
+    sudo: required
+    install:
+    - pip install -r requirements.txt
+    script:
+    - pycodestyle src/statuscake-ips.py
+  - language: python
+    python: 3.4
+    os: linux
+    sudo: required
+    install:
+    - pip install -r requirements.txt
+    script:
+    - pycodestyle src/statuscake-ips.py
+  - language: python
+    python: 3.5
+    os: linux
+    sudo: required
+    install:
+    - pip install -r requirements.txt
+    script:
+    - pycodestyle src/statuscake-ips.py
+  - language: python
+    python: 3.6
+    os: linux
+    sudo: required
+    install:
+    - pip install -r requirements.txt
+    script:
+    - pycodestyle src/statuscake-ips.py
+  - language: ruby
+    rvm: 2.2
+    before_script: gem install awesome_bot
+    script: find . -type f -name "*.md" | while read file; do awesome_bot $file --allow-redirect
+      --allow-dupe -w github.com/AntiPhotonltd/statuscake-ips/; done
+notifications:
+  email: false
+  slack:
+    secure: haD28qKNVBAVMDnxpEtwK20MB4i7dQ5g7M2dGqJQfOUQPJK+gvtxVdOexLfxmNIgBTTbSNzZ5ABerdgMQwCw91MjS8zqWGPdk3FZvzhcUYCElvoHTrwWL+KSKTxEJIYGsjOR/8fcYnE6PBf7v2tjmbVjJnMJf5MsV3kegKbbQ2nPbDEW2jOp+fbmyunixv5gan7Pci4f92oKUfjZHK1VVIa8yc+MCgGe4xQKNMruK2APyf0pUUD5/l0NTCnb/6hYjjiprpLtMIhXdH8UiKg3tj6TbVUnhTCgDnCekaQ8RxUZmc+DpUVCRxYvGap8rOPl1IQw0Qc93oRKjN5wPX7FureAKgTHbuGBRz5qo430M0NvEu1Vrp87hKIYfu+1N1KzAjp3ivB/0PcTa3qMbAUpzgI0npupmQ5FPPxCcTal5ydMcJ3ina1QJb7wdzGaxoUS9YpFg1D3Coti9xIp3hQXBSNsZgZAav/m4foI5DDa/0eIGvue4dC9Cs21WoPv8rRxP9NQdd/qqfe8Q2LAjWJ7n4E6pGl0siCrUOaUk68goVqJlb07t4EL2ke1niBGzGOxip1lMN4R4sEqJE/oizZWjE2WhMnB+IfuaUcLWiJeXfOQbqLDcIug3DOhknps9a5V1ZeeGMp8qCwTdTAkSDA7egheT4S7a4JYevSgIoZZbB8=
