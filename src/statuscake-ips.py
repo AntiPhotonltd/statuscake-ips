@@ -69,7 +69,7 @@ def get_ip_list(country_code):
 
     for key, dict in data.iteritems():
         if country_code is None or dict['countryiso'] == country_code:
-            print("%s; # %s  " % (dict['ip'], dict['countryiso']))
+            print("%s; # %s - %s " % (dict['ip'], dict['countryiso'], dict['title']))
 
 
 if __name__ == "__main__":
