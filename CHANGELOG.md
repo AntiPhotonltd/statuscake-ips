@@ -1,3 +1,9 @@
+## 1.0.2 (October 30, 2018)
+
+CHANGES:
+
+* Updated requirements.txt due to security issue with 'requests' plugin.
+
 ## 1.0.1 (April 26, 2018)
 
 CHANGES:
