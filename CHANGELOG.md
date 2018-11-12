@@ -2,7 +2,7 @@
 
 CHANGES:
 
-* Fix changlog etc following github username change. ([@TGWolf][])
+* Fix changelog etc following github username change. ([@TGWolf][])
 
 ## 1.0.2 (October 30, 2018)
 
