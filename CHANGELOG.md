@@ -1,3 +1,9 @@
+## 1.0.4 (November 21, 2018)
+
+CHANGES:
+
+* Make use of Travis Toolkit modules. ([@TGWolf][])
+
 ## 1.0.3 (November 12, 2018)
 
 CHANGES:

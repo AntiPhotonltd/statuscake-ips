@@ -1,50 +1,76 @@
+sudo: required
+
 matrix:
   include:
   - language: python
+    python: 2.6
+    os: linux
+    before_install:
+      - mkdir travis
+      - git clone https://github.com/TravisToolbox/pycodestyle-travis.git travis/pycodetyle
+    install:
+      - "./travis/pycodetyle/install.sh"
+    script:
+      - "./travis/pycodetyle/build.sh"
+  - language: python
     python: 2.7
     os: linux
-    sudo: required
+    before_install:
+      - mkdir travis
+      - git clone https://github.com/TravisToolbox/pycodestyle-travis.git travis/pycodetyle
     install:
-    - pip install -r requirements.txt
+      - "./travis/pycodetyle/install.sh"
     script:
-    - pycodestyle src/statuscake-ips.py
+      - "./travis/pycodetyle/build.sh"
   - language: python
     python: 3.3
     os: linux
-    sudo: required
+    before_install:
+      - mkdir travis
+      - git clone https://github.com/TravisToolbox/pycodestyle-travis.git travis/pycodetyle
     install:
-    - pip install -r requirements.txt
+      - "./travis/pycodetyle/install.sh"
     script:
-    - pycodestyle src/statuscake-ips.py
+      - "./travis/pycodetyle/build.sh"
   - language: python
     python: 3.4
     os: linux
-    sudo: required
+    before_install:
+      - mkdir travis
+      - git clone https://github.com/TravisToolbox/pycodestyle-travis.git travis/pycodetyle
     install:
-    - pip install -r requirements.txt
+      - "./travis/pycodetyle/install.sh"
     script:
-    - pycodestyle src/statuscake-ips.py
+      - "./travis/pycodetyle/build.sh"
   - language: python
     python: 3.5
     os: linux
-    sudo: required
+    before_install:
+      - mkdir travis
+      - git clone https://github.com/TravisToolbox/pycodestyle-travis.git travis/pycodetyle
     install:
-    - pip install -r requirements.txt
+      - "./travis/pycodetyle/install.sh"
     script:
-    - pycodestyle src/statuscake-ips.py
+      - "./travis/pycodetyle/build.sh"
   - language: python
     python: 3.6
     os: linux
-    sudo: required
+    before_install:
+      - mkdir travis
+      - git clone https://github.com/TravisToolbox/pycodestyle-travis.git travis/pycodetyle
     install:
-    - pip install -r requirements.txt
+      - "./travis/pycodetyle/install.sh"
     script:
-    - pycodestyle src/statuscake-ips.py
+      - "./travis/pycodetyle/build.sh"
   - language: ruby
     rvm: 2.2
-    before_script: gem install awesome_bot
-    script: find . -type f -name "*.md" | while read file; do awesome_bot $file --allow-redirect
-      --allow-dupe -w github.com/AntiPhotonltd/statuscake-ips/; done
+    before_install:
+      - mkdir travis
+      - git clone https://github.com/TravisToolbox/awesomebot-travis.git travis/awesomebot
+    install:
+      - ./travis/awesomebot/install.sh
+    script:
+      - ./travis/awesomebot/build.sh
 notifications:
   email: false
   slack:
