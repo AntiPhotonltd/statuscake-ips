@@ -1,4 +1,4 @@
-pycodestyle
-iso3166==0.8
-simplejson==3.13.2
-requests>=2.20.0
+pycodestyle==2.4.0
+iso3166==0.9
+simplejson==3.16.0
+requests==2.21.0
